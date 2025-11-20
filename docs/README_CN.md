@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-green.svg) ![Platform](https://img.shields.io/badge/Platform-ComfyUI-blue)
 
-[Español](README.md) | [English](README_EN.md) | [Deutsch](README_DE.md) | [Русский](README_RU.md) | [中文](README_CN.md) | [日本語](README_JP.md)
+[Español](../README.md) | [English](README_EN.md) | [Deutsch](README_DE.md) | [Русский](README_RU.md) | [中文](README_CN.md) | [日本語](README_JP.md)
 
 ---
 
@@ -25,7 +25,7 @@
 
 ### 视觉示例
 
-![使用虚拟节点（红色框中高亮显示）加载的工作流示例，保持了原始连接。](image_0.png)
+![使用虚拟节点（红色框中高亮显示）加载的工作流示例，保持了原始连接。](../image_0.png)
 *使用虚拟节点（在红色框中高亮显示）加载的工作流示例，保持了原始连接以便于替换。*
 
 ---
@@ -97,4 +97,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
 重启 ComfyUI 并加载您的流程。完成！
 
 ## 📄 许可证
+
 本项目采用 MIT 许可证。您可以自由使用、修改和共享它。
