@@ -25,7 +25,7 @@ Este pack soluciona el problema del "Huevo y la Gallina":
 
 ### Ejemplo Visual
 
-![Ejemplo de flujo de trabajo cargado con nodos Dummy (resaltados en rojo), manteniendo las conexiones.](image_0.png)
+![Ejemplo de flujo de trabajo cargado con nodos Dummy (resaltados en rojo), manteniendo las conexiones.](Ejemplo.jpg)
 *Ejemplo de flujo de trabajo cargado con nodos Dummy (resaltados en los recuadros rojos), manteniendo las conexiones originales para facilitar su reemplazo.*
 
 ---
@@ -99,3 +99,4 @@ Reinicia ComfyUI y carga tu flujo. ¡Listo!
 
 ## 📄 Licencia
 Este proyecto está bajo la licencia MIT. Eres libre de usarlo, modificarlo y compartirlo.
+
