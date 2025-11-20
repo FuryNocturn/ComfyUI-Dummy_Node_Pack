@@ -1,55 +1,63 @@
-# üß© ComfyUI Dummy Node Pack
+# ?? ComfyUI Dummy Node Pack
 
 ![License](https://img.shields.io/badge/License-MIT-green.svg) ![Platform](https://img.shields.io/badge/Platform-ComfyUI-blue)
 
-**Recupera el control de tus Workflows.**
-
-Este paquete de nodos personalizados crea "Nodos Fake" (simulados) para reemplazar aquellos nodos antiguos, eliminados o espec√≠ficos de servicios en la nube (como A1111, Cloud, etc.) que impiden cargar un flujo de trabajo en ComfyUI.
-
-> ‚ö†Ô∏è **IMPORTANTE:** Estos nodos **NO procesan im√°genes**. Son *placeholders* (marcadores de posici√≥n) que permiten cargar el gr√°fico visualmente sin errores, conservando las conexiones (cables) para que puedas sustituirlos por nodos nativos funcionales.
+[Espa?ol](README.md) | [English](README_EN.md) | [Deutsch](README_DE.md) | [ß≤ßÂß„ß„ß‹ß⁄ß€](README_RU.md) | [÷–Œƒ](README_CN.md) | [»’±æ’Z](README_JP.md)
 
 ---
 
-## üöÄ ¬øPor qu√© usar esto?
+**Recupera el control de tus Workflows.**
 
-Cuando cargas un workflow antiguo y te faltan nodos, ComfyUI a menudo rompe la interfaz o impide la ejecuci√≥n.
+Este paquete de nodos personalizados crea "Nodos Fake" (simulados) para reemplazar aquellos nodos antiguos, eliminados o espec®™ficos de servicios en la nube (como A1111, Cloud, etc.) que impiden cargar un flujo de trabajo en ComfyUI.
+
+> ?? **IMPORTANTE:** Estos nodos **NO procesan im®¢genes**. Son *placeholders* (marcadores de posici®Æn) que permiten cargar el gr®¢fico visualmente sin errores, conservando las conexiones (cables) para que puedas sustituirlos por nodos nativos funcionales.
+
+---
+
+## ?? ?Por qu®¶ usar esto?
+
+Cuando cargas un workflow antiguo y te faltan nodos, ComfyUI a menudo rompe la interfaz o impide la ejecuci®Æn.
 Este pack soluciona el problema del "Huevo y la Gallina":
 1.  Carga los nodos faltantes como "Dummies".
-2.  Te permite ver d√≥nde iban los cables.
+2.  Te permite ver d®Ænde iban los cables.
 3.  Te da la oportunidad de conectar nodos nativos (`Load Checkpoint`, `KSampler`, etc.).
 4.  Una vez reparado, puedes borrar los dummies.
 
+### Ejemplo Visual
+
+![Ejemplo de flujo de trabajo cargado con nodos Dummy (resaltados en rojo), manteniendo las conexiones.](image_0.png)
+*Ejemplo de flujo de trabajo cargado con nodos Dummy (resaltados en los recuadros rojos), manteniendo las conexiones originales para facilitar su reemplazo.*
+
 ---
 
-## üìã Nodos Soportados Actuales
+## ?? Nodos Soportados Actuales
 
-Si tu flujo pide alguno de estos nodos, este pack lo cargar√° autom√°ticamente como un nodo üõë **DUMMY**.
+Si tu flujo pide alguno de estos nodos, este pack lo cargar®¢ autom®¢ticamente como un nodo ?? **DUMMY**.
 
-| Nombre del Nodo Perdido (ID) | Descripci√≥n / Uso Original | Soluci√≥n (Reemplazar con Nativos) |
+| Nombre del Nodo Perdido (ID) | Descripci®Æn / Uso Original | Soluci®Æn (Reemplazar con Nativos) |
 | :--- | :--- | :--- |
 | `ECHOCheckpointLoaderSimple` | Cargador de modelos simple | **Load Checkpoint** |
 | `KSampler_A1111` | Sampler estilo Automatic1111 | **KSampler** (Copia los valores seed/steps) |
 
 ---
 
-## üõ†Ô∏è Instalaci√≥n
+## ??? Instalaci®Æn
 
 1.  Ve a tu carpeta `ComfyUI/custom_nodes/`.
 2.  Clona este repositorio:
     ```bash
     git clone [https://github.com/TU_USUARIO/ComfyUI-Dummy_Node_Pack.git](https://github.com/TU_USUARIO/ComfyUI-Dummy_Node_Pack.git)
-	```
-    
+    ```
 3.  Reinicia ComfyUI.
 
 ---
 
-## üßë‚Äçüíª Gu√≠a de Desarrollo: C√≥mo a√±adir m√°s nodos
+## ????? Gu®™a de Desarrollo: C®Æmo a?adir m®¢s nodos
 
-La estructura est√° dise√±ada para ser **modular**. Si descargas un flujo nuevo y te falta un nodo diferente (ej. `SuperUpscaler`), sigue estos pasos para a√±adirlo a tu pack local:
+La estructura est®¢ dise?ada para ser **modular**. Si descargas un flujo nuevo y te falta un nodo diferente (ej. `SuperUpscaler`), sigue estos pasos para a?adirlo a tu pack local:
 
 ### Paso 1: Definir el Nodo
-Abre el archivo `nodes.py`. Copia la plantilla del final y ad√°ptala. Lo importante es definir los `INPUT_TYPES` para que coincidan con los cables que necesitas rescatar.
+Abre el archivo `nodes.py`. Copia la plantilla del final y ad®¢ptala. Lo importante es definir los `INPUT_TYPES` para que coincidan con los cables que necesitas rescatar.
 
 ```python
 # En nodes.py
@@ -58,7 +66,7 @@ class Fake_SuperUpscaler:
 
     @classmethod
     def INPUT_TYPES(s):
-        # Define aqu√≠ las entradas que ten√≠a el nodo original
+        # Define aqu®™ las entradas que ten®™a el nodo original
         return {"required": { "image": ("IMAGE",), "scale": ("FLOAT", {"default": 1.5}) }}
 
     RETURN_TYPES = ("IMAGE",)
@@ -69,7 +77,7 @@ class Fake_SuperUpscaler:
 ```
 
 ### Paso 2: Registrar el Nodo
-Abre el archivo __init__.py, importa tu nueva clase y a√±√°dela al mapeo:
+Abre el archivo __init__.py, importa tu nueva clase y a?®¢dela al mapeo:
 
 ```python
 # En __init__.py
@@ -82,13 +90,12 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "SuperUpscaler": "üõë DUMMY SuperUpscaler" # <--- 3. Nombre visible en UI
+    "SuperUpscaler": "?? DUMMY SuperUpscaler" # <--- 3. Nombre visible en UI
 }
 ```
 
 ### Paso 3: Aplicar
-Reinicia ComfyUI y carga tu flujo. ¬°Listo!
+Reinicia ComfyUI y carga tu flujo. ?Listo!
 
-
-## üìÑ Licencia
-Este proyecto est√° bajo la licencia MIT. Eres libre de usarlo, modificarlo y compartirlo.
+## ?? Licencia
+Este proyecto est®¢ bajo la licencia MIT. Eres libre de usarlo, modificarlo y compartirlo.
