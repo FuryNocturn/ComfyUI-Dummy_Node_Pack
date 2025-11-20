@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-green.svg) ![Platform](https://img.shields.io/badge/Platform-ComfyUI-blue)
 
-[Español](README.md) | [English](docs/README_EN.md) | [Deutsch](docs/README_DE.md) | [Русский](docs/README_RU.md) | [中文](docs/README_CN.md) | [日本語](docs/README_JP.md)
+[Español](README.md) | [English](README_EN.md) | [Deutsch](README_DE.md) | [Русский](README_RU.md) | [中文](README_CN.md) | [日本語](README_JP.md)
 
 ---
 
@@ -99,4 +99,5 @@ Reinicia ComfyUI y carga tu flujo. ¡Listo!
 
 ## 📄 Licencia
 Este proyecto está bajo la licencia MIT. Eres libre de usarlo, modificarlo y compartirlo.
+
 
